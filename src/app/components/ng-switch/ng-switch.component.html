@@ -1,0 +1,23 @@
+<div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'success'">success</div>
+    <div *ngSwitchCase="'info'">success</div>
+    <div *ngSwitchCase="'warning'">success</div>
+    <div *ngSwitchDefault>danger</div>
+</div>
+<button type="button" (click)="alerta = 'success'" class="btn btn-outline-primary">
+    change
+</button>
+<div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        <strong>Well done</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia nulla blanditiis ipsum quidem quia delectus
+    </div>
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        <strong>Well done</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia nulla blanditiis ipsum quidem quia delectus
+    </div>
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        <strong>Well done</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia nulla blanditiis ipsum quidem quia delectus
+    </div>
+    <div *ngSwitchDefault="" class="alert alert-danger" role="alert">
+        <strong>Well done</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia nulla blanditiis ipsum quidem quia delectus
+    </div>
+</div>
